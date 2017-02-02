@@ -1,0 +1,102 @@
+C:\Users\Ashley\Desktop\TextAdventure\TextAdventure\bin\Debug\TextAdventure.exe.config
+C:\Users\Ashley\Desktop\TextAdventure\TextAdventure\bin\Debug\TextAdventure.XML
+C:\Users\Ashley\Desktop\TextAdventure\TextAdventure\bin\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure\TextAdventure\bin\Debug\TextAdventure.pdb
+C:\Users\Ashley\Desktop\TextAdventure\TextAdventure\obj\Debug\TextAdventure.csprojResolveAssemblyReference.cache
+C:\Users\Ashley\Desktop\TextAdventure\TextAdventure\obj\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure\TextAdventure\obj\Debug\TextAdventure.pdb
+E:\TextAdventure\TextAdventure\bin\Debug\TextAdventure.exe.config
+E:\TextAdventure\TextAdventure\bin\Debug\TextAdventure.XML
+E:\TextAdventure\TextAdventure\obj\Debug\TextAdventure.exe
+E:\TextAdventure\TextAdventure\obj\Debug\TextAdventure.pdb
+E:\TextAdventure\TextAdventure\bin\Debug\TextAdventure.exe
+E:\TextAdventure\TextAdventure\bin\Debug\TextAdventure.pdb
+E:\TextAdventure\TextAdventure\obj\Debug\TextAdventure.csprojResolveAssemblyReference.cache
+F:\TextAdventure\TextAdventure\bin\Debug\TextAdventure.exe.config
+F:\TextAdventure\TextAdventure\bin\Debug\TextAdventure.XML
+F:\TextAdventure\TextAdventure\obj\Debug\TextAdventure.exe
+F:\TextAdventure\TextAdventure\obj\Debug\TextAdventure.pdb
+F:\TextAdventure\TextAdventure\bin\Debug\TextAdventure.exe
+F:\TextAdventure\TextAdventure\bin\Debug\TextAdventure.pdb
+F:\TextAdventure\TextAdventure\obj\Debug\TextAdventure.csprojResolveAssemblyReference.cache
+C:\Users\Ashley\Desktop\TextAdventure2\TextAdventure\bin\Debug\TextAdventure.exe.config
+C:\Users\Ashley\Desktop\TextAdventure2\TextAdventure\bin\Debug\TextAdventure.XML
+C:\Users\Ashley\Desktop\TextAdventure2\TextAdventure\obj\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure2\TextAdventure\obj\Debug\TextAdventure.pdb
+C:\Users\Ashley\Desktop\TextAdventure2\TextAdventure\bin\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure2\TextAdventure\bin\Debug\TextAdventure.pdb
+C:\Users\Ashley\Desktop\TextAdventure2\TextAdventure\obj\Debug\TextAdventure.csprojResolveAssemblyReference.cache
+C:\Users\Ashley\Desktop\TextAdventure3\TextAdventure\bin\Debug\TextAdventure.exe.config
+C:\Users\Ashley\Desktop\TextAdventure3\TextAdventure\bin\Debug\TextAdventure.XML
+C:\Users\Ashley\Desktop\TextAdventure3\TextAdventure\obj\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure3\TextAdventure\obj\Debug\TextAdventure.pdb
+C:\Users\Ashley\Desktop\TextAdventure3\TextAdventure\bin\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure3\TextAdventure\bin\Debug\TextAdventure.pdb
+C:\Users\Ashley\Desktop\TextAdventure3\TextAdventure\obj\Debug\TextAdventure.csprojResolveAssemblyReference.cache
+C:\Users\Ashley\Desktop\TextAdventure4\TextAdventure\bin\Debug\TextAdventure.exe.config
+C:\Users\Ashley\Desktop\TextAdventure4\TextAdventure\bin\Debug\TextAdventure.XML
+C:\Users\Ashley\Desktop\TextAdventure4\TextAdventure\obj\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure4\TextAdventure\obj\Debug\TextAdventure.pdb
+C:\Users\Ashley\Desktop\TextAdventure4\TextAdventure\bin\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure4\TextAdventure\bin\Debug\TextAdventure.pdb
+C:\Users\Ashley\Desktop\TextAdventure4\TextAdventure\obj\Debug\TextAdventure.csprojResolveAssemblyReference.cache
+E:\TextAdventure5\TextAdventure\bin\Debug\TextAdventure.exe.config
+E:\TextAdventure5\TextAdventure\bin\Debug\TextAdventure.XML
+E:\TextAdventure5\TextAdventure\obj\Debug\TextAdventure.exe
+E:\TextAdventure5\TextAdventure\obj\Debug\TextAdventure.pdb
+E:\TextAdventure5\TextAdventure\bin\Debug\TextAdventure.exe
+E:\TextAdventure5\TextAdventure\bin\Debug\TextAdventure.pdb
+E:\TextAdventure5\TextAdventure\obj\Debug\TextAdventure.csprojResolveAssemblyReference.cache
+F:\TextAdventure5\TextAdventure\bin\Debug\TextAdventure.exe.config
+F:\TextAdventure5\TextAdventure\bin\Debug\TextAdventure.XML
+F:\TextAdventure5\TextAdventure\obj\Debug\TextAdventure.exe
+F:\TextAdventure5\TextAdventure\obj\Debug\TextAdventure.pdb
+F:\TextAdventure5\TextAdventure\bin\Debug\TextAdventure.exe
+F:\TextAdventure5\TextAdventure\bin\Debug\TextAdventure.pdb
+F:\TextAdventure5\TextAdventure\obj\Debug\TextAdventure.csprojResolveAssemblyReference.cache
+C:\Users\Ashley\Desktop\TextAdventure7\TextAdventure\bin\Debug\TextAdventure.exe.config
+C:\Users\Ashley\Desktop\TextAdventure7\TextAdventure\bin\Debug\TextAdventure.XML
+C:\Users\Ashley\Desktop\TextAdventure7\TextAdventure\obj\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure7\TextAdventure\obj\Debug\TextAdventure.pdb
+C:\Users\Ashley\Desktop\TextAdventure8\TextAdventure\bin\Debug\TextAdventure.exe.config
+C:\Users\Ashley\Desktop\TextAdventure8\TextAdventure\bin\Debug\TextAdventure.XML
+C:\Users\Ashley\Desktop\TextAdventure8\TextAdventure\obj\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure8\TextAdventure\obj\Debug\TextAdventure.pdb
+E:\TextAdventure9\TextAdventure\bin\Debug\TextAdventure.exe.config
+E:\TextAdventure9\TextAdventure\bin\Debug\TextAdventure.XML
+E:\TextAdventure9\TextAdventure\obj\Debug\TextAdventure.exe
+E:\TextAdventure9\TextAdventure\obj\Debug\TextAdventure.pdb
+E:\TextAdventure9\TextAdventure\bin\Debug\TextAdventure.exe
+E:\TextAdventure9\TextAdventure\bin\Debug\TextAdventure.pdb
+E:\TextAdventure9\TextAdventure\obj\Debug\TextAdventure.csprojResolveAssemblyReference.cache
+C:\Users\Ashley\Desktop\TextAdventure10\TextAdventure\bin\Debug\TextAdventure.exe.config
+C:\Users\Ashley\Desktop\TextAdventure10\TextAdventure\bin\Debug\TextAdventure.XML
+C:\Users\Ashley\Desktop\TextAdventure10\TextAdventure\obj\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure10\TextAdventure\obj\Debug\TextAdventure.pdb
+C:\Users\Ashley\Desktop\TextAdventure10\TextAdventure\bin\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure10\TextAdventure\bin\Debug\TextAdventure.pdb
+C:\Users\Ashley\Desktop\TextAdventure11\TextAdventure\bin\Debug\TextAdventure.exe.config
+C:\Users\Ashley\Desktop\TextAdventure11\TextAdventure\bin\Debug\TextAdventure.XML
+C:\Users\Ashley\Desktop\TextAdventure11\TextAdventure\obj\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure11\TextAdventure\obj\Debug\TextAdventure.pdb
+C:\Users\Ashley\Desktop\TextAdventure11\TextAdventure\bin\Debug\TextAdventure.exe
+C:\Users\Ashley\Desktop\TextAdventure11\TextAdventure\bin\Debug\TextAdventure.pdb
+C:\Users\Ashley\Desktop\TextAdventure11\TextAdventure\obj\Debug\TextAdventure.csprojResolveAssemblyReference.cache
+E:\Text Adventure Hand In\TextAdventure11\TextAdventure\bin\Debug\TextAdventure.exe.config
+E:\Text Adventure Hand In\TextAdventure11\TextAdventure\bin\Debug\TextAdventure.XML
+E:\Text Adventure Hand In\TextAdventure11\TextAdventure\obj\Debug\TextAdventure.exe
+E:\Text Adventure Hand In\TextAdventure11\TextAdventure\obj\Debug\TextAdventure.pdb
+E:\Text Adventure Hand In\TextAdventure11\TextAdventure\bin\Debug\TextAdventure.exe
+E:\Text Adventure Hand In\TextAdventure11\TextAdventure\bin\Debug\TextAdventure.pdb
+E:\Text Adventure Hand In\TextAdventure11\TextAdventure\obj\Debug\TextAdventure.csprojResolveAssemblyReference.cache
+D:\TextAdventure\TextAdventure\bin\Debug\TextAdventure.exe.config
+D:\TextAdventure\TextAdventure\bin\Debug\TextAdventure.XML
+D:\TextAdventure\TextAdventure\obj\Debug\TextAdventure.exe
+D:\TextAdventure\TextAdventure\obj\Debug\TextAdventure.pdb
+C:\Users\Games\Desktop\Marking\L5 Programming\Burton\TextAdventure\TextAdventure\bin\Debug\TextAdventure.exe.config
+C:\Users\Games\Desktop\Marking\L5 Programming\Burton\TextAdventure\TextAdventure\bin\Debug\TextAdventure.XML
+C:\Users\Games\Desktop\Marking\L5 Programming\Burton\TextAdventure\TextAdventure\obj\Debug\TextAdventure.exe
+C:\Users\Games\Desktop\Marking\L5 Programming\Burton\TextAdventure\TextAdventure\obj\Debug\TextAdventure.pdb
+C:\Users\Games\Desktop\Marking\L5 Programming\Burton\TextAdventure\TextAdventure\bin\Debug\TextAdventure.exe
+C:\Users\Games\Desktop\Marking\L5 Programming\Burton\TextAdventure\TextAdventure\bin\Debug\TextAdventure.pdb
+C:\Users\Games\Desktop\Marking\L5 Programming\Burton\TextAdventure\TextAdventure\obj\Debug\TextAdventure.csprojResolveAssemblyReference.cache
