@@ -29,12 +29,12 @@ namespace TextAdventure
             inventory = new List<Item>();
             playerInv = new Item();
 
-            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("For all commands type 'help'!");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("\nWelcome adventurer, prepare yourself for a fantastical journey into the unknown.\n");
+            Console.Write("\nWelcome, prepare yourself for a mysterious journey into the unknown.\n");
 
-            // build the "map" and adds all items
+            // build the "map" and adds all items to the locations
             Location l1 = new Location("Entrance to hall", "You stand at the entrance of a long hallway. The hallways gets darker\nand darker, and you cannot see what lies beyond. To the east\nis an old oaken door, unlocked and beckoning.");
             Item rock = new Item();
             rock.name = "rock";
@@ -111,7 +111,7 @@ namespace TextAdventure
         public void showLocation()
 		{
             //Gets lcoation details and writes them
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Red;
 			Console.WriteLine("\n" + currentLocation.getTitle() + "\n");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(currentLocation.getDescription());
@@ -177,6 +177,8 @@ namespace TextAdventure
                     return;
                 }
             }
+
+
 
             #region add 
             //If player says add then remove the add from the input and see what item they wanted to add. If the current location has that item in it then remove it from the scene and add t to players inventory
@@ -456,7 +458,7 @@ Push any key to return!");
             showLocation();
             Console.WriteLine("\nInvalid command, are you confused?\n");
 
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Red;
 
         }
 
