@@ -29,7 +29,7 @@ namespace TextAdventure
             inventory = new List<Item>();
             playerInv = new Item();
 
-            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("For all commands type 'help'!");
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write("\nWelcome adventurer, prepare yourself for a fantastical journey into the unknown.\n");
