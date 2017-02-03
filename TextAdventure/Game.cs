@@ -32,31 +32,31 @@ namespace TextAdventure
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("For all commands type 'help'!");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("\nWelcome adventurer, prepare yourself for a fantastical journey into the unknown.\n");
+            Console.Write("\nWelcome, prepare yourself for a journey into the unknown.\n");
 
             // build the "map" and adds all items
-            Location l1 = new Location("Entrance to hall", "You stand at the entrance of a long hallway. The hallways gets darker\nand darker, and you cannot see what lies beyond. To the east\nis an old oaken door, unlocked and beckoning.");
+            Location l1 = new Location("Entrance to house", "You stand in the entrance of a long hallway. The hallways gets darker\nand darker, and you cannot see what lies beyond. To the east\nis an old oaken door unlocked.");
             Item rock = new Item();
             rock.name = "rock";
-            rock.description = "This rock looks like it could be used to break something.";
+            rock.description = "The rock can be thrown to break something.";
             l1.addItem(rock);
 
-            Location l2 = new Location("End of hall", "You have reached the end of a long dark hallway. You can\nsee a ladder leading to the loft.");
+            Location l2 = new Location("End of hall", "You have reached the end of a dark hallway. You can\nsee a ladder leading to the loft.");
             Item Rope = new Item();
             Rope.name = "rope";
-            Rope.description = "This might be useful to get down a long drop.";
+            Rope.description = "You can use this to climb down a big drop.";
             l2.addItem(Rope);
 
 
-            Location l3 = new Location("Small study", "This is a small and cluttered study, containing a desk covered with\npapers. Though they no doubt are of some importance,\nyou cannot read their writing.");
+            Location l3 = new Location("Small study", "This is a small cluttered study, containing a desk covered with\nold torn papers. The paper is too destroyed to make\nout the text.");
             Item key = new Item();
             key.name = "key";
-            key.description = "A shiny key. Looks like it could open a door somewhere.";
+            key.description = "A shiny key. Looks like it could open a door.";
             l3.addItem(key);
 
             l4 = new Location("Top of stairs", "You reach the top of the stairs. All the doors are locked however there is a \nsmall window at the end of the hallway that looks like it can be smashed.");
 
-            l5 = new Location("The Forest", "You are outside in the forest. There is something moving ahead.");
+            l5 = new Location("The Forest", "You are outside in the forest. There is something moving ahead in the darkness.");
             Item stick = new Item();
             stick.name = "stick";
             stick.description = "Looks like this could be sharpened into a weapon.";
@@ -68,15 +68,15 @@ namespace TextAdventure
 
             l6 = new Location("Monster", "You walk deeper into the forest until a monster jumps out infront of you.");
 
-            l7 = new Location("Outside shead", "You find a locked shead with a blood trail leading to it. Maybe the monster ran in there!");
+            l7 = new Location("Outside shead", "You find a locked shead with a blood trail leading to it. There are \nnoices coming from inside!");
 
             l8 = new Location("Inside shead", "There is blood all over the shead. Theres as trap door in the middle of the room and a door at the back.");
 
             l9 = new Location("Inside trap door", "You see a long drop below.");
 
-            Location l10 = new Location("Second shead room", "You see the monster standing infront of you. There is blood all over the room and the monster is badly hurt.");
+            Location l10 = new Location("Second shead room", "You see the monster standing infront of you. There is blood all over the room and the monster is badly hurt,you should attack again.");
 
-            l11 = new Location("Trap door death", "You climb down the rope. You can't see anything down here.");
+            l11 = new Location("Trap door death", "You climb down the rope. You can't see anything down here you need to go back.");
 
 
             //Add exits for lcoations
@@ -130,6 +130,7 @@ namespace TextAdventure
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\nAvailable Exits: \n");
+            
             //Write all available exits
 			foreach (Exit exit in currentLocation.getExits() )
 			{
@@ -292,7 +293,7 @@ namespace TextAdventure
             #region use
             if (input.Length > 1)
             {
-                if (input[0] == "use")
+                if (input[0] == "use" || input[0] == "u")
                 {
                     Item item1 = null;
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -367,7 +368,7 @@ namespace TextAdventure
             //If attack is typed then checked player inventory and players location. Depending on where the player is and whats in inventory then continue with action
             if (input.Length > 0)
             {
-                if (input[0] == "attack")
+                if (input[0] == "attack" || input[0] == "a")
                 {
 
                     Console.Clear();
@@ -426,16 +427,16 @@ namespace TextAdventure
             //If help is typed then show all possible commands
             if (input.Length > 0)
             {
-                if (input[0] == "help")
+                if (input[0] == "help" || input[0] == "h")
                 {
                     Console.Clear();
                     Console.WriteLine(@"HELP!
 _________
 
-Attack: attack
+Attack: attack or a
 Add: add ""itemName""
 Examine: examine ""itemName""
-Help: Help
+Help: Help or h
 Move: North,East, South, West or n, e, s, w
 Inventory: i, inv or Inventory
 Quit: q or Quit 
