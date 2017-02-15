@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace TextAdventure
 {
-	class Game
-	{
-		Location currentLocation;
+    class Game
+    {
+        Location currentLocation;
         Item playerInv;
-    
-		public bool isRunning = true;
+
+        public bool isRunning = true;
 
         private List<Item> inventory;
 
@@ -24,7 +24,7 @@ namespace TextAdventure
         Location l11;
 
         public Game()
-		{
+        {
             //Initialises players inventory and items
             inventory = new List<Item>();
             playerInv = new Item();
@@ -32,36 +32,36 @@ namespace TextAdventure
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("For all commands type 'help'!");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("\nWelcome, prepare yourself for a mysterious journey into the unknown.\n");
+            Console.Write("\nWelcome, prepare yourself for a journey.\n");
 
-            // build the "map" and adds all items to the locations
-            Location l1 = new Location("Entrance to hall", "You stand at the entrance of a long hallway. The hallways gets darker\nand darker, and you cannot see what lies beyond. To the east\nis an old oaken door, unlocked and beckoning.");
+            // build the "map" and adds all items
+            Location l1 = new Location("Entrance", "You stand at the entrance of a long hallway. The hallway is dark. To the east\nis an old door, unlocked.");
             Item rock = new Item();
             rock.name = "rock";
             rock.description = "This rock looks like it could be used to break something.";
             l1.addItem(rock);
 
-            Location l2 = new Location("End of hall", "You have reached the end of a long dark hallway. You can\nsee a ladder leading to the loft.");
+            Location l2 = new Location("End of hall", "You have reached the end of the hallway. You can\nsee a ladder leading up.");
             Item Rope = new Item();
             Rope.name = "rope";
             Rope.description = "This might be useful to get down a long drop.";
             l2.addItem(Rope);
 
 
-            Location l3 = new Location("Small study", "This is a small and cluttered study, containing a desk covered with\npapers. Though they no doubt are of some importance,\nyou cannot read their writing.");
+            Location l3 = new Location("Small study", "This is a cluttered study, could be something here.");
             Item key = new Item();
             key.name = "key";
-            key.description = "A shiny key. Looks like it could open a door somewhere.";
+            key.description = "A key. Looks like it could open a door.";
             l3.addItem(key);
 
-            l4 = new Location("Top of stairs", "You reach the top of the stairs. All the doors are locked however there is a \nsmall window at the end of the hallway that looks like it can be smashed.");
+            l4 = new Location("Top of stairs", "You reach the top of the stairs. There is a \nsmall window that could be smashed.");
 
             l5 = new Location("The Forest", "You are outside in the forest. There is something moving ahead.");
             Item stick = new Item();
             stick.name = "stick";
             stick.description = "Looks like this could be sharpened into a weapon.";
             l5.addItem(stick);
-            Item  flint = new Item();
+            Item flint = new Item();
             flint.name = "flint";
             flint.description = "Looks like this could be used to sharpen a weapon!";
             l5.addItem(flint);
@@ -81,9 +81,9 @@ namespace TextAdventure
 
             //Add exits for lcoations
             l1.addExit(new Exit(Exit.Directions.North, l2));
-			l1.addExit(new Exit(Exit.Directions.East, l3));
+            l1.addExit(new Exit(Exit.Directions.East, l3));
 
-			l2.addExit(new Exit(Exit.Directions.South, l1));
+            l2.addExit(new Exit(Exit.Directions.South, l1));
             l2.addExit(new Exit(Exit.Directions.Up, l4));
 
             l3.addExit(new Exit(Exit.Directions.West, l1));
@@ -105,38 +105,38 @@ namespace TextAdventure
             l11.addExit(new Exit(Exit.Directions.Up, l9));
 
             currentLocation = l1;
-			showLocation();
-		}
+            showLocation();
+        }
 
         public void showLocation()
-		{
+        {
             //Gets lcoation details and writes them
             Console.ForegroundColor = ConsoleColor.Red;
-			Console.WriteLine("\n" + currentLocation.getTitle() + "\n");
+            Console.WriteLine("\n" + currentLocation.getTitle() + "\n");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(currentLocation.getDescription());
 
             //Checks if current location has any items in the scene. if it does then write them
-			if (currentLocation.getInventory().Count > 0)
-			{
+            if (currentLocation.getInventory().Count > 0)
+            {
                 Console.ForegroundColor = ConsoleColor.Green;
-				Console.WriteLine("\nThe room contains the following:\n");
+                Console.WriteLine("\nThe room contains the following:\n");
 
-				for (int i = 0; i < currentLocation.getInventory().Count; i++)
-				{
-					Console.WriteLine(currentLocation.getInventory()[i].name);
-				}
-			}
+                for (int i = 0; i < currentLocation.getInventory().Count; i++)
+                {
+                    Console.WriteLine(currentLocation.getInventory()[i].name);
+                }
+            }
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\nAvailable Exits: \n");
             //Write all available exits
-			foreach (Exit exit in currentLocation.getExits() )
-			{
-				Console.WriteLine(exit.getDirection());
-			}
+            foreach (Exit exit in currentLocation.getExits())
+            {
+                Console.WriteLine(exit.getDirection());
+            }
 
-			Console.WriteLine();
+            Console.WriteLine();
 
             Console.ForegroundColor = ConsoleColor.White;
 
@@ -177,8 +177,6 @@ namespace TextAdventure
                     return;
                 }
             }
-
-
 
             #region add 
             //If player says add then remove the add from the input and see what item they wanted to add. If the current location has that item in it then remove it from the scene and add t to players inventory
@@ -294,7 +292,7 @@ namespace TextAdventure
             #region use
             if (input.Length > 1)
             {
-                if (input[0] == "use")
+                if (input[0] == "use" || input [0] == "u")
                 {
                     Item item1 = null;
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -369,7 +367,7 @@ namespace TextAdventure
             //If attack is typed then checked player inventory and players location. Depending on where the player is and whats in inventory then continue with action
             if (input.Length > 0)
             {
-                if (input[0] == "attack")
+                if (input[0] == "attack" || input[0] == "a")
                 {
 
                     Console.Clear();
@@ -428,16 +426,16 @@ namespace TextAdventure
             //If help is typed then show all possible commands
             if (input.Length > 0)
             {
-                if (input[0] == "help")
+                if (input[0] == "help" || input [0] == "h")
                 {
                     Console.Clear();
                     Console.WriteLine(@"HELP!
 _________
 
-Attack: attack
+Attack: attack, a
 Add: add ""itemName""
 Examine: examine ""itemName""
-Help: Help
+Help: Help, h
 Move: North,East, South, West or n, e, s, w
 Inventory: i, inv or Inventory
 Quit: q or Quit 
@@ -458,50 +456,50 @@ Push any key to return!");
             showLocation();
             Console.WriteLine("\nInvalid command, are you confused?\n");
 
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.White;
 
         }
 
         private void showInventory()
-		{
+        {
 
             Console.Clear();
             showLocation();
 
             Console.ForegroundColor = ConsoleColor.Magenta;
             //If player has items in inventory then show them
-            if (playerInv.getPlayerInventory().Count > 0 )
-			{
-				Console.WriteLine("\nA quick look in your bag reveals the following:\n");
+            if (playerInv.getPlayerInventory().Count > 0)
+            {
+                Console.WriteLine("\nA quick look in your bag reveals the following:\n");
 
-				foreach ( Item item in playerInv.getPlayerInventory())
-				{
-					Console.WriteLine(item.name);
-				}
-			}
-			else
-			{
-				Console.WriteLine("Your bag is empty.");
-			}
+                foreach (Item item in playerInv.getPlayerInventory())
+                {
+                    Console.WriteLine(item.name);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Your bag is empty.");
+            }
 
-			Console.WriteLine("");
+            Console.WriteLine("");
             Console.ForegroundColor = ConsoleColor.White;
 
         }
 
         public void Update()
-		{
-			string currentCommand = Console.ReadLine().ToLower();
+        {
+            string currentCommand = Console.ReadLine().ToLower();
 
-			// instantly check for a quit
-			if (currentCommand == "quit" || currentCommand == "q")
-			{
-				isRunning = false;
-				return;
-			}
+            // instantly check for a quit
+            if (currentCommand == "quit" || currentCommand == "q")
+            {
+                isRunning = false;
+                return;
+            }
 
             // otherwise, process commands.
-            if(currentCommand != "")
+            if (currentCommand != "")
                 doAction(currentCommand);
 
             Console.ForegroundColor = ConsoleColor.White;
