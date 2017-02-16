@@ -178,11 +178,11 @@ namespace TextAdventure
                 }
             }
 
-            #region add 
+            #region Take 
             //If player says add then remove the add from the input and see what item they wanted to add. If the current location has that item in it then remove it from the scene and add t to players inventory
             if (input.Length > 1)
             {
-                if (input[0] == "add")
+                if (input[0] == "take" || input[0] == "t")
                 {
                     for (int i = 0; i < currentLocation.getInventory().Count; i++)
                     {
@@ -432,10 +432,10 @@ namespace TextAdventure
                     Console.WriteLine(@"HELP!
 _________
 
-Attack: attack, a
-Add: add ""itemName""
+Attack: a, attack
+Take: t, take ""itemName""
 Examine: examine ""itemName""
-Help: Help, h
+Help: h, help
 Move: North,East, South, West or n, e, s, w
 Inventory: i, inv or Inventory
 Quit: q or Quit 
