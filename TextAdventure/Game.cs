@@ -36,10 +36,10 @@ namespace TextAdventure
 
             // build the "map" and adds all items
             Location l1 = new Location("Entrance", "You stand at the entrance of a long hallway. The hallway is dark. To the east\nis an old door, unlocked.");
-            Item rock = new Item();
-            rock.name = "rock";
-            rock.description = "This rock looks like it could be used to break something.";
-            l1.addItem(rock);
+            Item brick = new Item();
+            brick.name = "brick";
+            brick.description = "This brick looks like it could be used to break something.";
+            l1.addItem(brick);
 
             Location l2 = new Location("End of hall", "You have reached the end of the hallway. You can\nsee a ladder leading up.");
             Item Rope = new Item();
@@ -50,8 +50,8 @@ namespace TextAdventure
 
             Location l3 = new Location("Small study", "This is a cluttered study, could be something here.");
             Item key = new Item();
-            key.name = "key";
-            key.description = "A key. Looks like it could open a door.";
+            key.name = "crowbar";
+            key.description = "A crowbar. It could brake a lock.";
             l3.addItem(key);
 
             l4 = new Location("Top of stairs", "You reach the top of the stairs. There is a \nsmall window that could be smashed.");
@@ -214,7 +214,7 @@ namespace TextAdventure
             //If player examines then remove examine and see what they want to examine. This calls the getDescription fucntion and returns the items description if it is in the players inventory
             if (input.Length > 1)
             {
-                if (input[0] == "look" || input[0] == "examine")
+                if (input[0] == "look" || input[0] == "examine" || input[0] == "e")
                 {
 
                     string desc = playerInv.GetDescription(input[1]);
@@ -267,7 +267,7 @@ namespace TextAdventure
                             Console.Clear();
                             showLocation();
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("\nYou combine the rock and stick and make a spear!\n");
+                            Console.WriteLine("\nYou combine the flint and stick and make a spear!\n");
                             return;
                         }
                         else
@@ -308,7 +308,7 @@ namespace TextAdventure
                     }
                     if (item1 != null)
                     {
-                        if (item1.name == "rock" && currentLocation.ToString() == "Top of stairs")
+                        if (item1.name == "brick" && currentLocation.ToString() == "Top of stairs")
                         {
 
                             l6.addExit(new Exit(Exit.Directions.South, l5));
@@ -318,11 +318,11 @@ namespace TextAdventure
                             Console.Clear();
                             showLocation();
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("You smash the window with the rock.");
+                            Console.WriteLine("You smash the window with the brick.");
 
                             return;
                         }
-                        else if (item1.name == "key" && currentLocation.ToString() == "Outside shead")
+                        else if (item1.name == "crowbar" && currentLocation.ToString() == "Outside shead")
                         {
 
                             l7.addExit(new Exit(Exit.Directions.East, l8));
@@ -332,8 +332,8 @@ namespace TextAdventure
                             Console.Clear();
                             showLocation();
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("You try the key in the lock.");
-                            Console.WriteLine("The key works and the door is unlocked.");
+                            Console.WriteLine("You try to brake the lock.");
+                            Console.WriteLine("The crowbar brakes the lock, the door is now open.");
                             return;
                         }
                         else if (item1.name == "rope" && currentLocation.ToString() == "Inside trap door")
@@ -432,14 +432,14 @@ namespace TextAdventure
                     Console.WriteLine(@"HELP!
 _________
 
-Attack: a, attack
-Take: t, take ""itemName""
-Examine: examine ""itemName""
-Help: h, help
+Attack: a or attack
+Take: t ""itemName"" or take ""itemName""
+Examine: e ""itemName"" or examine ""itemName""
+Help: h or help
 Move: North,East, South, West or n, e, s, w
 Inventory: i, inv or Inventory
 Quit: q or Quit 
-Use: Use ""itemName""
+Use: u ""itemName"" or Use ""itemName""
 Craft: Craft ""itemName"" ""itemName""
 
 
