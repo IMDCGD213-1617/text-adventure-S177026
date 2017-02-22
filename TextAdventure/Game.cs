@@ -35,26 +35,26 @@ namespace TextAdventure
             Console.Write("\nWelcome, prepare yourself for a journey.\n");
 
             // build the location and adds all the items in the locations
-            Location l1 = new Location("Entrance", "You stand at the entrance of a long hallway. The hallway is dark. To the east\nis an old door, unlocked.");
+            Location l1 = new Location("Cave entrance", "You stand at the entrance of a cave. The cave is dark.\ntheir is a flashing light in the distance.");
             Item brick = new Item();
             brick.name = "brick";
             brick.description = "This brick looks like it could be used to break something.";
             l1.addItem(brick);
 
-            Location l2 = new Location("End of hall", "You have reached the end of the hallway. You can\nsee a ladder leading up.");
+            Location l2 = new Location("End of cave", "You have reached the end of the cave in fornt of you is a small candle. You can\nsee a ladder leading up.");
             Item Rope = new Item();
             Rope.name = "rope";
             Rope.description = "This might be useful to get down a long drop.";
             l2.addItem(Rope);
 
 
-            Location l3 = new Location("Small study", "This is a cluttered study, could be something here.");
+            Location l3 = new Location("small shed", "This is a cluttered shed, could be something here.");
             Item key = new Item();
             key.name = "crowbar";
             key.description = "A crowbar. It could brake a lock.";
             l3.addItem(key);
 
-            l4 = new Location("Top of stairs", "You reach the top of the stairs. There is a \nsmall window that could be smashed.");
+            l4 = new Location("Top of ladder", "You reach the top of the ladder. There is a\nwindow that leads outside, it could be smashed.");
 
             l5 = new Location("The Forest", "You are outside in the forest. There is something moving ahead.");
             Item stick = new Item();
@@ -66,15 +66,15 @@ namespace TextAdventure
             flint.description = "Looks like this could be used to sharpen a weapon!";
             l5.addItem(flint);
 
-            l6 = new Location("Monster", "You walk deeper into the forest until a monster jumps out infront of you.");
+            l6 = new Location("Wolf den", "You walk deeper into the forest until a wolf attacks from behind.");
 
-            l7 = new Location("Outside shead", "You find a locked shead with a blood trail leading to it. Maybe the monster ran in there!");
+            l7 = new Location("Small shack", "You find a locked shack with wolf fur on the bottom, it could be in there!");
 
-            l8 = new Location("Inside shead", "There is blood all over the shead. Theres as trap door in the middle of the room and a door at the back.");
+            l8 = new Location("Inside shack", "There is blood all over the shack. There is a trap\ndoor in the middle of the room and a door at the back.");
 
             l9 = new Location("Inside trap door", "You see a long drop below.");
 
-            Location l10 = new Location("Second shead room", "You see the monster standing infront of you. There is blood all over the room and the monster is badly hurt.");
+            Location l10 = new Location("Second shack room", "You see the wolf infront of you. There\nis blood all over the room and the wolf is badly hurt.");
 
             l11 = new Location("Trap door death", "You climb down the rope. You can't see anything down here.");
 
@@ -308,7 +308,7 @@ namespace TextAdventure
                     }
                     if (item1 != null)
                     {
-                        if (item1.name == "brick" && currentLocation.ToString() == "Top of stairs")
+                        if (item1.name == "brick" && currentLocation.ToString() == "Top of ladder")
                         {
 
                             l6.addExit(new Exit(Exit.Directions.South, l5));
@@ -322,7 +322,7 @@ namespace TextAdventure
 
                             return;
                         }
-                        else if (item1.name == "crowbar" && currentLocation.ToString() == "Outside shead")
+                        else if (item1.name == "crowbar" && currentLocation.ToString() == "Small shack")
                         {
 
                             l7.addExit(new Exit(Exit.Directions.East, l8));
@@ -376,7 +376,7 @@ namespace TextAdventure
 
                     foreach (Item item in playerInv.getPlayerInventory())
                     {
-                        if (currentLocation.ToString() == "Monster")
+                        if (currentLocation.ToString() == "Wolf den")
                         {
                             if (item.name == "spear")
                             {
@@ -384,20 +384,20 @@ namespace TextAdventure
                                 Console.Clear();
                                 showLocation();
                                 Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("You attack the monster with the spear. It's wounded but manages to escape");
-                                l6.setDescription("You walk deeper into the forest. There is a blood trail left from the monster.");
+                                Console.WriteLine("You attack the wolf with the spear. It's wounded but manages to escape");
+                                l6.setDescription("You walk deeper into the forest. There is a blood trail left from the wolf.");
                                 return;
                             }
                         }
-                        else if (currentLocation.ToString() == "Second shead room")
+                        else if (currentLocation.ToString() == "Second shack room")
                         {
                             if (item.name == "spear")
                             {
                                 Console.Clear();
                                 showLocation();
                                 Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("You attack the monster again killing it!!");
-                                Console.WriteLine("\nCongratulations you killed the monster and completed the game!");
+                                Console.WriteLine("You attack the wolf again killing it!!");
+                                Console.WriteLine("\nCongratulations you killed the wolf and completed the game!");
                                 Console.WriteLine("Push any key to end the game.....");
                                 Console.ReadLine();
                                 isRunning = false;
@@ -406,7 +406,7 @@ namespace TextAdventure
                         }
                     }
 
-                    if (currentLocation.ToString() == "Second shead room" || currentLocation.ToString() == "Monster")
+                    if (currentLocation.ToString() == "Second shack room" || currentLocation.ToString() == "Wolf den")
                     {
                         Console.Clear();
                         showLocation();
