@@ -34,7 +34,7 @@ namespace TextAdventure
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write("\nWelcome, prepare yourself for a journey.\n");
 
-            // build the "map" and adds all items
+            // build the location and adds all the items in the locations
             Location l1 = new Location("Entrance", "You stand at the entrance of a long hallway. The hallway is dark. To the east\nis an old door, unlocked.");
             Item brick = new Item();
             brick.name = "brick";
@@ -116,7 +116,7 @@ namespace TextAdventure
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(currentLocation.getDescription());
 
-            //Checks if current location has any items in the scene. if it does then write them
+            //Checks what items are in the location, and writes them
             if (currentLocation.getInventory().Count > 0)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
