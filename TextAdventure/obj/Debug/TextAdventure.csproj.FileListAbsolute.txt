@@ -108,7 +108,7 @@ C:\Users\Lewis\Documents\GitHub\text-adventure-S177026\TextAdventure\bin\Debug\T
 C:\Users\Lewis\Documents\GitHub\text-adventure-S177026\TextAdventure\bin\Debug\TextAdventure.pdb
 C:\Users\Games\Documents\GitHub\text-adventure-S177026\TextAdventure\bin\Debug\TextAdventure.exe.config
 C:\Users\Games\Documents\GitHub\text-adventure-S177026\TextAdventure\bin\Debug\TextAdventure.XML
-C:\Users\Games\Documents\GitHub\text-adventure-S177026\TextAdventure\obj\Debug\TextAdventure.exe
-C:\Users\Games\Documents\GitHub\text-adventure-S177026\TextAdventure\obj\Debug\TextAdventure.pdb
 C:\Users\Games\Documents\GitHub\text-adventure-S177026\TextAdventure\bin\Debug\TextAdventure.exe
 C:\Users\Games\Documents\GitHub\text-adventure-S177026\TextAdventure\bin\Debug\TextAdventure.pdb
+C:\Users\Games\Documents\GitHub\text-adventure-S177026\TextAdventure\obj\Debug\TextAdventure.exe
+C:\Users\Games\Documents\GitHub\text-adventure-S177026\TextAdventure\obj\Debug\TextAdventure.pdb
