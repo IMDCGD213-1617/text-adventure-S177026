@@ -45,10 +45,10 @@ namespace TextAdventure
             Location level2 = new Location("End of cave", "You have reached the end of the cave in fornt of you is a small candle. You can\nsee a ladder leading up.");         
 
             Location level3 = new Location("small shed", "This is a cluttered shed, could be something here.");
-            Item key = new Item();
-            key.name = "crowbar";
-            key.description = "A crowbar. It could brake a lock.";
-            level3.addItem(key);
+            Item crowbar = new Item();
+            crowbar.name = "crowbar";
+            crowbar.description = "A crowbar. It could break a lock.";
+            level3.addItem(crowbar);
 
             level4 = new Location("Top of ladder", "You reach the top of the ladder. There is a\nwindow that leads outside, it could be smashed.");
 
