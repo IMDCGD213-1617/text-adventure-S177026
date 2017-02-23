@@ -25,7 +25,7 @@ namespace TextAdventure
 
         public Game()
         {
-            //Initialises players inventory and items
+            //Initialises players inventory list and items
             inventory = new List<Item>();
             playerInv = new Item();
 
@@ -34,7 +34,7 @@ namespace TextAdventure
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write("\nWelcome, prepare yourself for a journey.\n");
 
-            // build the location and adds all the items in the locations
+            // builds the locations and adds all the items, and adds the desctiption to the item
             Location l1 = new Location("Cave entrance", "You stand at the entrance of a cave. The cave is dark.\ntheir is a flashing light in the distance.");
             Item brick = new Item();
             brick.name = "brick";
@@ -59,11 +59,11 @@ namespace TextAdventure
             l5 = new Location("The Forest", "You are outside in the forest. There is something moving ahead.");
             Item stick = new Item();
             stick.name = "stick";
-            stick.description = "Looks like this could be sharpened into a weapon.";
+            stick.description = "You could craft this with something.";
             l5.addItem(stick);
             Item flint = new Item();
             flint.name = "flint";
-            flint.description = "Looks like this could be used to sharpen a weapon!";
+            flint.description = "You could craft something with this.";
             l5.addItem(flint);
 
             l6 = new Location("Wolf den", "You walk deeper into the forest until a wolf attacks from behind.");
@@ -110,13 +110,13 @@ namespace TextAdventure
 
         public void showLocation()
         {
-            //Gets lcoation details and writes them
+            //Gets the current location details and writes them
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\n" + currentLocation.getTitle() + "\n");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(currentLocation.getDescription());
 
-            //Checks what items are in the location, and writes them
+            //Checks what items are in the current location, and writes them
             if (currentLocation.getInventory().Count > 0)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -168,7 +168,7 @@ namespace TextAdventure
                 }
             }
 
-            //If player has typed inventory, inv or i then show the players inventory
+            //Gives the player options of input when looking at inventory
             if (input.Length > 0)
             {
                 if (input[0] == "inventory" || input[0] == "inv" || input[0] == "i")
@@ -179,7 +179,7 @@ namespace TextAdventure
             }
 
             #region Take 
-            //If player says add then remove the add from the input and see what item they wanted to add. If the current location has that item in it then remove it from the scene and add t to players inventory
+            //Allows player to take items from a level and put it in their inventory
             if (input.Length > 1)
             {
                 if (input[0] == "take" || input[0] == "t")
@@ -211,7 +211,7 @@ namespace TextAdventure
             #endregion
 
             #region look 
-            //If player examines then remove examine and see what they want to examine. This calls the getDescription fucntion and returns the items description if it is in the players inventory
+            //Allows players to examine an item thats in their inventory and writes the description written above 
             if (input.Length > 1)
             {
                 if (input[0] == "look" || input[0] == "examine" || input[0] == "e")
@@ -228,7 +228,7 @@ namespace TextAdventure
             #endregion
 
             #region craft
-            //Checks to see if use is in command
+            //Craft command, most input 2 items that can carft together
             if (input.Length > 2)
             {
                 if (input[0] == "craft")
@@ -252,7 +252,7 @@ namespace TextAdventure
 
                     if (item1 != null && item2 != null)
                     {
-                        //Checks names and runs what happens when items are used together. If nothing can happen tell user that nothing happens
+                        //Checks to make sure players are crafting the correct item, says can craft if wrong
                         if (item1.name == "flint" && item2.name == "stick" || item1.name == "stick" && item2.name == "flint")
                         {
                             playerInv.RemoveItems(item1);
@@ -292,12 +292,12 @@ namespace TextAdventure
             #region use
             if (input.Length > 1)
             {
-                if (input[0] == "use" || input [0] == "u")
+                if (input[0] == "use")
                 {
                     Item item1 = null;
                     Console.ForegroundColor = ConsoleColor.Red;
 
-                    //Checks all items in player inv against the 2 items mentioned in use command. If they match then set the item to mentioned item
+                    //Use, checks if an iteam can be used in a certain location, and removes it from inventory after use
                     foreach (Item item in playerInv.getPlayerInventory())
                     {
                         if (input[1] == item.name)
@@ -342,12 +342,12 @@ namespace TextAdventure
 
                             playerInv.RemoveItems(item1);
 
-                            l9.setDescription("All you can see is the rope. The rope leads down into the darkness.");
+                            l9.setDescription("The rope leads down into the darkness.");
 
                             Console.Clear();
                             showLocation();
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("You use the rope to give you a path down.");
+                            Console.WriteLine("Theres nothing down here, go back up.");
                             return;
 
                         }
@@ -364,7 +364,7 @@ namespace TextAdventure
             #endregion
 
             #region attack
-            //If attack is typed then checked player inventory and players location. Depending on where the player is and whats in inventory then continue with action
+            //checks if player is in the correct location to attack, make sure the player has the correct items in inventory. Also doesn't remove weapon from inventory
             if (input.Length > 0)
             {
                 if (input[0] == "attack" || input[0] == "a")
@@ -423,7 +423,7 @@ namespace TextAdventure
             #endregion
 
             #region help
-            //If help is typed then show all possible commands
+            //Show possible command you can use
             if (input.Length > 0)
             {
                 if (input[0] == "help" || input [0] == "h")
@@ -439,7 +439,7 @@ Help: h or help
 Move: North,East, South, West or n, e, s, w
 Inventory: i, inv or Inventory
 Quit: q or Quit 
-Use: u ""itemName"" or Use ""itemName""
+Use: Use ""itemName""
 Craft: Craft ""itemName"" ""itemName""
 
 
@@ -467,7 +467,7 @@ Push any key to return!");
             showLocation();
 
             Console.ForegroundColor = ConsoleColor.Magenta;
-            //If player has items in inventory then show them
+            //shows the items in the players inventory, says its empty if you have nothing
             if (playerInv.getPlayerInventory().Count > 0)
             {
                 Console.WriteLine("\nA quick look in your bag reveals the following:\n");
